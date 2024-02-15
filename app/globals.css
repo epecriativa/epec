@@ -169,7 +169,7 @@ hr {
 }
 
 .bg-imagee {
-    background-image: url('https://github.com/epecriativa/epec/blob/main/public/assets/newsletter/bgFile.png');
+    background-image: url('https://raw.githubusercontent.com/epecriativa/epec/main/public/assets/newsletter/bgFile.png');
     background-size: cover;
     border-radius: 20px;
 }
