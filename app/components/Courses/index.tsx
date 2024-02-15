@@ -22,28 +22,28 @@ const postData: DataType[] = [
         heading: 'Economia Criativa',
         heading2: '',
         name: "Joseph Nascimento",
-        imgSrc: './assets/courses/Courses-04.png',
+        imgSrc: '/assets/courses/Courses-04.png',
         price: 0,
         rating: 5.0,
-        ementaSrc: './assets/courses/courseone.png',
+        ementaSrc: '/assets/courses/courseone.png',
     },
     {
         heading: 'Branding',
         heading2: '',
         name: "Joseph Nascimento",
-        imgSrc: './assets/courses/Courses-03.png',
+        imgSrc: '/assets/courses/Courses-03.png',
         price: 0,
         rating: 5,
-        ementaSrc: './assets/courses/courseone.png',
+        ementaSrc: '/assets/courses/courseone.png',
     },
     {
         heading: 'Projeção Criativa',
         heading2: '',
         name: "Alcimar Veirisimo",
-        imgSrc: './assets/courses/projecao-criativa.png',
+        imgSrc: '/assets/courses/projecao-criativa.png',
         price: 0,
         rating: 5,
-        ementaSrc: './assets/courses/courseone.png',
+        ementaSrc: '/assets/courses/courseone.png',
     },
 ]
 
@@ -133,11 +133,11 @@ export default class MultipleItems extends Component {
 
                                         <div className="flex justify-between pt-6">
                                             <div className="flex gap-2">
-                                                <Image src={'./assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                <Image src={'/assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
                                                 <h3 className="text-base font-medium text-black opacity-75">Acesse a Ementa</h3>
                                             </div>
                                             <div className="flex gap-2">
-                                                <Image src={'./assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                <Image src={'/assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
                                                 <h3 className="text-base font-medium text-black opacity-75">Conheça</h3>
                                             </div>
                                         </div>

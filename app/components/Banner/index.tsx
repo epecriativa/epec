@@ -15,7 +15,7 @@ const Banner = () => {
 
                     <div className='col-span-6 flex flex-col justify-evenly'>
                         <div className='flex gap-2 mx-auto lg:mx-0'>
-                            <Image src="./assets/banner/check.svg" alt="check-image" width={20} height={20} />
+                            <Image src="/assets/banner/check.svg" alt="check-image" width={20} height={20} />
                             <h3 className='text-epec-blue text-sm font-semibold text-center lg:text-start'>Bem-vindo a</h3>
                         </div>
                         <h1 className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-120 pt-5 lg:pt-0'>Escola Pernambucana de Economia Criativa</h1>
@@ -25,7 +25,7 @@ const Banner = () => {
                             <p className="py-6 lg:py-8 text-lg text-black opacity-75 rounded-full focus:outline-none focus:text-black">Aperte o Play!</p>
                             <div className="inset-y-0 left-0 flex items-center pr-2 lg:pt-0">
                                 <button onClick={() => setOpen(true)} className="p-3 lg:p-5 focus:outline-none focus:shadow-outline bg-epec-blue hover:scale-110 duration-150 ease-in-out rounded-full">
-                                    <Image src={'./assets/banner/play.svg'} alt="inputicon" width={30} height={30} />
+                                    <Image src={'/assets/banner/play.svg'} alt="inputicon" width={30} height={30} />
                                 </button>
                             </div>
                         </div>
@@ -68,7 +68,7 @@ const Banner = () => {
                     </div>
 
                     <div className='col-span-6 flex justify-center'>
-                        <Image src="./assets/banner/rayssa.png" alt="nothing" width={1000} height={805} />
+                        <Image src="/assets/banner/rayssa.png" alt="nothing" width={1000} height={805} />
                     </div>
                 </div>
             </div>

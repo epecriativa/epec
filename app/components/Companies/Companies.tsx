@@ -10,25 +10,25 @@ interface Data {
 
 const data: Data[] = [
     {
-        imgSrc: "./assets/carousel/armazem-02-criatividade.svg"
+        imgSrc: "/assets/carousel/armazem-02-criatividade.svg"
     },
     {
-        imgSrc: "./assets/carousel/porto-digital.svg"
+        imgSrc: "/assets/carousel/porto-digital.svg"
     },
     {
-        imgSrc: "./assets/carousel/onu.svg"
+        imgSrc: "/assets/carousel/onu.svg"
     },
     {
-        imgSrc: "./assets/carousel/world-economic-forum.svg"
+        imgSrc: "/assets/carousel/world-economic-forum.svg"
     },
     {
-        imgSrc: "./assets/carousel/sebrae.svg"
+        imgSrc: "/assets/carousel/sebrae.svg"
     },
     {
-        imgSrc: "./assets/carousel/redbull.svg"
+        imgSrc: "/assets/carousel/redbull.svg"
     },
     {
-        imgSrc: "./assets/carousel/british-council.svg"
+        imgSrc: "/assets/carousel/british-council.svg"
     }
 ]
 
