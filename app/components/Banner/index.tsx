@@ -8,7 +8,7 @@ const Banner = () => {
 
     return (
         <div id="home" className='bg-lightkblue'>
-            <ModalVideo channel='youtube' isOpen={isOpen} videoId="dMVNsFUs5Ys" autoplay onClose={() => setOpen(false)} />
+            <ModalVideo channel='youtube' isOpen={isOpen} videoId="dMVNsFUs5Ys" onClose={() => setOpen(false)} />
             <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
 
                 <div className='grid grid-cols-1 lg:grid-cols-12 space-x-1'>
