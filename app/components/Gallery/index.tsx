@@ -16,20 +16,20 @@ const Gallery = () => {
                 <div className='grid grid-cols-1 md:grid-cols-12 my-16 sm:space-x-6 space-y-6 md:space-y-0 px-6'>
 
                     <div className='col-span-6 flex justify-center overflow-hidden rounded-3xl'>
-                        <Image src="/assets/gallery/hackathon-inovacriativa.png" alt="pizza-one" width={1000} height={805} className="inner-img"/>
+                        <Image src="./assets/gallery/hackathon-inovacriativa.png" alt="pizza-one" width={1000} height={805} className="inner-img"/>
                     </div>
 
                     <div className='col-span-6 flex justify-center'>
                         <div className="grid grid-rows-1 grid-flow-row gap-4">
                             <div className="row-span-1 overflow-hidden rounded-3xl">
-                                <Image src="/assets/gallery/insight-caruaru.png" alt="pizza-two" width={700} height={405} className="inner-img"/>
+                                <Image src="./assets/gallery/insight-caruaru.png" alt="pizza-two" width={700} height={405} className="inner-img"/>
                             </div>
                             <div className='grid grid-cols-2 gap-2'>
                                 <div className='overflow-hidden rounded-3xl'>
-                                    <Image src="/assets/gallery/insight-caruaru-neto-joseph.png" alt="pizza-three" width={500} height={405} className="inner-img"/>
+                                    <Image src="./assets/gallery/insight-caruaru-neto-joseph.png" alt="pizza-three" width={500} height={405} className="inner-img"/>
                                 </div>
                                 <div className='overflow-hidden rounded-3xl'>
-                                    <Image src="/assets/gallery/sebrae-epec.png" alt="pizza-four" width={500} height={405} className="inner-img"/>
+                                    <Image src="./assets/gallery/sebrae-epec.png" alt="pizza-four" width={500} height={405} className="inner-img"/>
                                 </div>
                             </div>
                         </div>
