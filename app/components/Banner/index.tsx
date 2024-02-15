@@ -68,7 +68,7 @@ const Banner = () => {
                     </div>
 
                     <div className='col-span-6 flex justify-center'>
-                        <Image src="./assets/banner/rayssa.png" alt="nothing" width={1000} height={805} />
+                        <Image src="./assets/banner/rayssa.png" alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." priority />
                     </div>
                 </div>
             </div>
