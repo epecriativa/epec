@@ -70,7 +70,7 @@ const Banner = () => {
                     </div>
 
                     <div className='col-span-6 flex justify-center'>
-                        <Image src={bannerRayssa} alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." priority />
+                        <Image src={bannerRayssa} alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." width={500} height={500} />
                     </div>
                 </div>
             </div>
