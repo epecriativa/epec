@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
 import ModalVideo from 'react-modal-video';
-import bannerRayssa from './assets/banner/rayssa.png'
+
 
 const Banner = () => {
     const [isOpen, setOpen] = useState(false)
@@ -69,7 +69,7 @@ const Banner = () => {
                     </div>
 
                     <div className='col-span-6 flex justify-center'>
-                        <Image src={bannerRayssa} alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." />
+                        <Image src="./assets/banner/rayssa.png" alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." priority />
                     </div>
                 </div>
             </div>
