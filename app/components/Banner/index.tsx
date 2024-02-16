@@ -69,7 +69,7 @@ const Banner = () => {
                     </div>
 
                     <div className='col-span-6 flex justify-center'>
-                        <Image src="./assets/banner/rayssa.webp" alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." />
+                        <Image src="./assets/banner/rayssa.webp" width={1000} height={805} alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." />
                     </div>
                 </div>
             </div>
