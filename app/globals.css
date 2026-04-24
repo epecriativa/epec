@@ -6,7 +6,7 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gotham', 'Poppins', sans-serif;
 }
 
 html {
@@ -181,4 +181,3 @@ hr {
 .inner-img:hover {
     transform: scale(1.1);
 }
-  
