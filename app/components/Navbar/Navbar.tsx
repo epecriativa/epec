@@ -14,10 +14,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-    { name: 'Home', href: '#home', current: true },
+    { name: 'Sobre', href: '#sobre', current: true },
     { name: 'Cursos', href: '#courses', current: false },
-    { name: 'Galeria', href: '#gallery', current: false },
-    { name: 'Contato', href: '#contact', current: false },
+    { name: 'Eventos', href: '#eventos', current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -58,14 +57,14 @@ const Navbar = () => {
 
                             <div className="flex flex-shrink-0 items-center">
                                 <img
-                                    className="block h-12 w-40 lg:hidden"
-                                    src={'./assets/logo/logo.svg'}
-                                    alt="dsign-logo"
+                                    className="block h-12 w-auto lg:hidden"
+                                    src={'/logo epec.svg'}
+                                    alt="epec-logo"
                                 />
                                 <img
-                                    className="hidden h-full  w-40 lg:block"
-                                    src={'./assets/logo/logo.svg'}
-                                    alt="dsign-logo"
+                                    className="hidden h-12 w-auto lg:block"
+                                    src={'/logo epec.svg'}
+                                    alt="epec-logo"
                                 />
                             </div>
 
