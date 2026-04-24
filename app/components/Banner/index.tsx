@@ -14,11 +14,11 @@ const Banner = () => {
                             <h3 className='text-epec-blue text-lg font-medium'>Bem-vindo a</h3>
                         </div>
                         
-                        <h1 className='text-[#2D2F30] text-5xl sm:text-6xl font-bold leading-tight mb-6'>
+                        <h1 className='text-[#2D2F30] text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 tracking-tight'>
                             Escola Pernambucana<br />de Economia Criativa
                         </h1>
                         
-                        <h3 className='text-[#2D2F30] text-xl font-medium mb-12 max-w-lg'>
+                        <h3 className='text-[#2D2F30] text-lg sm:text-xl font-medium mb-12 max-w-lg leading-snug'>
                             Nossa missão <span className='text-epec-blue'>é educar as futuras gerações de profissionais criativos</span> e jovens empreendedores.
                         </h3>
 
