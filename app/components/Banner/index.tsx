@@ -1,75 +1,61 @@
 "use client"
 import Image from 'next/image';
-import React, { useState } from 'react';
-import ModalVideo from 'react-modal-video';
-
+import React from 'react';
 
 const Banner = () => {
-    const [isOpen, setOpen] = useState(false)
-
     return (
-        <div id="home" className='bg-lightkblue'>
-            <ModalVideo channel='youtube' isOpen={isOpen} videoId="dMVNsFUs5Ys" onClose={() => setOpen(false)} />
-            <div className="mx-auto max-w-7xl pt-20 sm:pb-24 px-6">
-
-                <div className='grid grid-cols-1 lg:grid-cols-12 space-x-1'>
-
-                    <div className='col-span-6 flex flex-col justify-evenly'>
-                        <div className='flex gap-2 mx-auto lg:mx-0'>
-                            <Image src="./assets/banner/check.svg" alt="check-image" width={20} height={20} />
-                            <h3 className='text-epec-blue text-sm font-semibold text-center lg:text-start'>Bem-vindo a</h3>
+        <div id="home" className='bg-white overflow-hidden relative'>
+            <div className="mx-auto max-w-7xl pt-20 pb-24 px-6 relative z-10">
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-10 items-center'>
+                    {/* Left Column */}
+                    <div className='flex flex-col justify-center'>
+                        <div className='flex gap-2 mb-4'>
+                            <Image src="/selo verify.svg" alt="check-image" width={24} height={24} />
+                            <h3 className='text-epec-blue text-lg font-medium'>Bem-vindo a</h3>
                         </div>
-                        <h1 className='text-midnightblue text-4xl sm:text-5xl font-semibold text-center lg:text-start lh-120 pt-5 lg:pt-0'>Escola Pernambucana de Economia Criativa</h1>
-                        <h3 className='text-charcoal text-lg font-normal text-center lg:text-start opacity-75 pt-5 lg:pt-0'>Acreditamos que a <span className='text-epec-blue'>Economia Criativa</span> é o motor para o futuro do desenvolvimento social, político e econômico do mundo.</h3>
+                        
+                        <h1 className='text-[#2D2F30] text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] mb-6 tracking-tight'>
+                            Escola Pernambucana<br />de Economia Criativa
+                        </h1>
+                        
+                        <h3 className='text-[#2D2F30] text-lg sm:text-xl font-medium mb-12 max-w-lg leading-snug'>
+                            Nossa missão <span className='text-epec-blue'>é educar as futuras gerações de profissionais criativos</span> e jovens empreendedores.
+                        </h3>
 
-                        <div className="relative text-white focus-within:text-white flex flex-row-reverse justify-center lg:justify-end rounded-full pt-5 lg:pt-0">
-                            <p className="py-6 lg:py-8 text-lg text-black opacity-75 rounded-full focus:outline-none focus:text-black">Aperte o Play!</p>
-                            <div className="inset-y-0 left-0 flex items-center pr-2 lg:pt-0">
-                                <button onClick={() => setOpen(true)} className="p-3 lg:p-5 focus:outline-none focus:shadow-outline bg-epec-blue hover:scale-110 duration-150 ease-in-out rounded-full">
-                                    <Image src={'./assets/banner/play.svg'} alt="inputicon" width={30} height={30} />
-                                </button>
-                            </div>
-                        </div>
-                        <div className='grid gap-y-2 overflow-scroll'>
-                            <div className='flex items-center pt-10 lg:pt-4'>
-                                <div className='flex flex-1 bg-epec-blue p-2 rounded-l-lg justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white'>CRIATIVIDADE</p>
-                                </div>
-                                <div className='flex flex-1  bg-epec-red p-2 justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white'>INOVAÇÃO</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-orange p-2 justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white'>CULTURA</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-yellow p-2 justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white'>EMPREENDEDORISMO</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-blue p-2 rounded-r-lg justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white'>DESIGN</p>
-                                </div>
-                            </div>
-                            <div className='flex items-center'>
-                                <div className='flex flex-1 bg-epec-red p-2 rounded-l-lg justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white '>MÚSICA</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-orange p-2 justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white '>ARTES</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-yellow p-2 justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white '>SUSTENTABILIDADE</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-blue p-2 justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white '>COLABORAÇÃO</p>
-                                </div>
-                                <div className='flex flex-1 bg-epec-red p-2 rounded-r-lg justify-center'>
-                                    <p className='text-sm md:text-base font-normal text-white '>REPRESENTATIVIDADE</p>
-                                </div>
-                            </div>
+                        <div className='mt-8'>
+                            <p className='text-[#57595F] text-sm font-medium mb-2'>
+                                Somos uma empresa<br />embarcada no:
+                            </p>
+                            <a 
+                                href="https://embarcadas.portodigital.org/embarcadas/2809" 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="inline-block transition-all duration-300 hover:scale-105 hover:opacity-80 drop-shadow-sm hover:drop-shadow-md"
+                            >
+                                <Image 
+                                    src="/logo.5417d9c.svg" 
+                                    alt="Porto Digital Logo" 
+                                    width={150} 
+                                    height={50} 
+                                    className="object-contain"
+                                />
+                            </a>
                         </div>
                     </div>
 
-                    <div className='col-span-6 flex justify-center'>
-                        <Image src="./assets/banner/rayssa.webp" width={1000} height={805} alt="Foto da Rayssa uma menina, morena de cabelo longo sorrindo." />
+                    {/* Right Column - Globe & Animation */}
+                    <div className='flex justify-center items-center relative min-h-[500px]'>
+                        
+                        {/* Globe Image */}
+                        <div className="relative z-10 w-full max-w-md">
+                            <Image 
+                                src="/earth epec sun.svg" 
+                                alt="Criatividade Muda o Mundo - epec" 
+                                width={500} 
+                                height={500} 
+                                className="w-full h-auto"
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

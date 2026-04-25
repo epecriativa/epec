@@ -13,9 +13,6 @@ const data: Data[] = [
         imgSrc: "./assets/carousel/armazem-02-criatividade.svg"
     },
     {
-        imgSrc: "./assets/carousel/porto-digital.svg"
-    },
-    {
         imgSrc: "./assets/carousel/onu.svg"
     },
     {
@@ -85,8 +82,8 @@ export default class MultipleItems extends Component {
                     <div className="py-14">
                         <Slider {...settings}>
                             {data.map((item, i) =>
-                                <div key={i}>
-                                    <Image src={item.imgSrc} alt={item.imgSrc} width={116} height={36} />
+                                <div key={i} className="flex justify-center items-center opacity-80 hover:opacity-100 transition-opacity">
+                                    <Image src={item.imgSrc} alt={item.imgSrc} width={116} height={36} className="mx-auto object-contain" />
                                 </div>
                             )}
                         </Slider>

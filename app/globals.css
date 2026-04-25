@@ -6,7 +6,7 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Gotham', 'Poppins', sans-serif;
 }
 
 html {
@@ -23,7 +23,7 @@ html:not([data-scroll="0"]) .navbar {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
     transition: 0.4s linear;
     padding: 0px !important;
-    z-index: 3;
+    z-index: 50;
 }
 
 hr {
@@ -181,4 +181,14 @@ hr {
 .inner-img:hover {
     transform: scale(1.1);
 }
-  
+
+/* Equal height for Slick Slider cards */
+.slick-track {
+    display: flex !important;
+}
+.slick-slide {
+    height: inherit !important;
+}
+.slick-slide > div {
+    height: 100%;
+}
