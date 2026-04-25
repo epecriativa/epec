@@ -14,13 +14,13 @@ const socialLinks: socialLinks[] = [
         width: 16
     },
     {
-        imgSrc: './assets/footer/facebook.svg',
-        link: 'https://facebook.com/epecriativa',
-        width: 10
+        imgSrc: './assets/footer/tiktok.svg',
+        link: 'https://www.tiktok.com/@epecriativa',
+        width: 14
     },
     {
-        imgSrc: './assets/footer/twitter.svg',
-        link: 'https://twitter.com/epecriativa',
+        imgSrc: './assets/footer/youtube.svg',
+        link: 'https://www.youtube.com/@epecriativa',
         width: 16
     },
     {
@@ -39,7 +39,7 @@ const socialLinks: socialLinks[] = [
 const footer = () => {
     return (
 
-        <div className="mx-auto max-w-2xl sm:pt-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+        <div id="sobre" className="mx-auto max-w-2xl sm:pt-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="my-12 grid grid-cols-1 gap-y-10 sm:grid-cols-6 lg:grid-cols-12">
 
                 {/* COLUMN-1 */}
@@ -48,7 +48,7 @@ const footer = () => {
                     <div className="flex flex-shrink-0 items-center border-right">
                         <Image src="./assets/logo/logo.svg" alt="logo" width={214} height={66} />
                     </div>
-                    <h3 className='text-sm font-medium text-gunmetalgray lh-160 mt-5 mb-4 lg:mb-16'>Utilizamos o cenário cultural e histórico do nosso<br />estado, para despertar o nosso senso criativo.</h3>
+                    <h3 className='text-lg font-medium text-[#1c2b33] lh-160 mt-5 mb-4 lg:mb-16'>Escola Pernambucana de<br />Economia Criativa</h3>
                     <div className='flex gap-4'>
 
                         {socialLinks.map((items, i) => (
@@ -65,7 +65,7 @@ const footer = () => {
                 {/* CLOUMN-2/3/4 */}
                 <div className='col-span-6 justify-center'>
                     <div className="sm:col-span-2">
-                        <p className="text-gunmetalgray text-sm font-medium mb-9"><span className='text-epec-red'>Rios Pontes e Overdrives.</span> <strong>Estamos situados no coração do Recife, e Recife está situado no nosso coração.</strong> A bagagem cultural do nosso estado é amplamente reconhecida em todo o Brasil, nos utilizamos dessa carga incrível de arte que nos cerca para mostrar como ser criativo é apenas uma questão de exercício de observação, então estamos no lugar certo.</p>
+                        <p className="text-gunmetalgray text-sm font-medium mb-9"><span className='text-[#05a8e1] font-bold'>Rios Pontes e Overdrives.</span> <strong>Estamos situados no coração do Recife, e Recife está situado no nosso coração.</strong> Falamos do uso de ativos intangíveis e sustentáveis como: <span className='text-[#05a8e1]'>Criatividade</span>, <span className='text-[#05a8e1]'>Cultura</span>, <span className='text-[#05a8e1]'>Design</span> e <span className='text-[#05a8e1]'>Tecnologias</span>, como geração de valor para Empreendedores, Artistas e Profissionais em geral transformarem ideias em negócios!</p>
                     </div>
                     <div className='flex justify-center'>
                         <Image src="./assets/footer/mapa-pernmabuco.svg" alt="nothing" width={350} height={805} />

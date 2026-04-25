@@ -181,3 +181,14 @@ hr {
 .inner-img:hover {
     transform: scale(1.1);
 }
+
+/* Equal height for Slick Slider cards */
+.slick-track {
+    display: flex !important;
+}
+.slick-slide {
+    height: inherit !important;
+}
+.slick-slide > div {
+    height: 100%;
+}

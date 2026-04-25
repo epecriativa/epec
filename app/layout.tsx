@@ -5,6 +5,8 @@ import Footer from './components/Footer/Footer';
 import Image from 'next/image';
 
 
+import Script from 'next/script';
+
 export const metadata = {
   title: 'epec - Escola Pernambucana de Economia Criativa',
   description: 'A epec é uma escola para formação de profissionais criativos e jovens empreendedores. Utilizamos o cenário cultural e histórico do nosso estado, para despertar o senso criativo dos nossos alunos.',
@@ -17,6 +19,21 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-PSYBP2QTYQ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-PSYBP2QTYQ');
+          `}
+        </Script>
+      </head>
       <body>
         <Navbar />
         {children}
