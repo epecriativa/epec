@@ -141,13 +141,13 @@ export default class MultipleItems extends Component {
                             {postData.map((items, i) => (
                                 <div key={i}>
 
-                                    <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[640px] flex flex-col justify-between'>
-                                        <div className="relative rounded-3xl overflow-hidden h-[220px]">
+                                    <div className='bg-white m-3 px-3 pt-3 pb-10 my-10 shadow-courses rounded-2xl flex flex-col'>
+                                        <div className="relative rounded-3xl overflow-hidden h-[220px] shrink-0">
                                             <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto bg-white object-cover w-full h-full" />
                                         </div>
 
-                                        <div className="px-3">
-                                            <div className='min-h-[160px] flex flex-col justify-start pt-6'>
+                                        <div className="px-3 flex-1 flex flex-col">
+                                            <div className='flex flex-col justify-start pt-6 pb-4'>
                                                 <h3 className='text-base font-normal opacity-75'>{items.name}</h3>
                                                 <h4 className='text-xl font-bold pt-1 text-[#222c44] leading-tight'>
                                                     {items.heading} {items.heading2}
@@ -157,33 +157,35 @@ export default class MultipleItems extends Component {
                                                 </p>
                                             </div>
 
-                                            <div className="flex justify-between items-center py-6">
-                                                <div className="flex items-center">
-                                                    <Image src="/Metodologia Exclusiva.svg" alt="Metodologia Exclusiva" width={140} height={36} className="object-contain" />
+                                            <div className="mt-auto">
+                                                <div className="flex justify-between items-center py-6">
+                                                    <div className="flex items-center">
+                                                        <Image src="/Metodologia Exclusiva.svg" alt="Metodologia Exclusiva" width={140} height={36} className="object-contain" />
+                                                    </div>
+                                                    <a 
+                                                        href={`https://wa.me/5581991337935?text=Olá, gostaria de aplicar para o curso: ${items.heading} ${items.heading2}...`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="bg-[#b5f78b] text-[#204906] px-6 py-2 rounded-full font-bold text-lg hover:opacity-90 transition-opacity tracking-wider"
+                                                    >
+                                                        Aplicar
+                                                    </a>
                                                 </div>
-                                                <a 
-                                                    href={`https://wa.me/5581991337935?text=Olá, gostaria de aplicar para o curso: ${items.heading} ${items.heading2}...`}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="bg-[#b5f78b] text-[#204906] px-6 py-2 rounded-full font-bold text-lg hover:opacity-90 transition-opacity tracking-wider"
-                                                >
-                                                    Aplicar
-                                                </a>
-                                            </div>
 
-                                            <hr style={{ color: "#C4C4C4" }} />
+                                                <hr style={{ color: "#C4C4C4" }} />
 
-                                            <div className="flex justify-between pt-6">
-                                                <div 
-                                                    className="flex gap-2 cursor-pointer hover:opacity-75 transition-opacity"
-                                                    onClick={() => this.setIsOpen(true, items.ementaSrc)}
-                                                >
-                                                    <Image src={'./assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
-                                                    <h3 className="text-base font-medium text-black opacity-75">Acesse a Ementa</h3>
-                                                </div>
-                                                <div className="flex gap-2">
-                                                    <Image src={'./assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
-                                                    <h3 className="text-base font-medium text-black opacity-75">Conheça</h3>
+                                                <div className="flex justify-between pt-6">
+                                                    <div 
+                                                        className="flex gap-2 cursor-pointer hover:opacity-75 transition-opacity"
+                                                        onClick={() => this.setIsOpen(true, items.ementaSrc)}
+                                                    >
+                                                        <Image src={'./assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                        <h3 className="text-base font-medium text-black opacity-75">Acesse a Ementa</h3>
+                                                    </div>
+                                                    <div className="flex gap-2">
+                                                        <Image src={'./assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                        <h3 className="text-base font-medium text-black opacity-75">Conheça</h3>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
