@@ -120,7 +120,7 @@ export default class MultipleItems extends Component {
                         slidesToScroll: 1,
                         infinite: true,
                         dots: false,
-                        arrows: true // Habilitar setas no mobile
+                        arrows: true 
                     }
                 }
             ]
@@ -141,12 +141,12 @@ export default class MultipleItems extends Component {
                             {postData.map((items, i) => (
                                 <div key={i}>
 
-                                    <div className='bg-white m-3 px-3 pt-3 pb-10 my-10 shadow-courses rounded-2xl flex flex-col'>
+                                    <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[640px] flex flex-col justify-between'>
                                         <div className="relative rounded-3xl overflow-hidden h-[220px] shrink-0">
                                             <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto bg-white object-cover w-full h-full" />
                                         </div>
 
-                                        <div className="px-3 flex-1 flex flex-col">
+                                        <div className="px-3 flex-1 flex flex-col justify-between">
                                             <div className='flex flex-col justify-start pt-6 pb-4'>
                                                 <h3 className='text-base font-normal opacity-75'>{items.name}</h3>
                                                 <h4 className='text-xl font-bold pt-1 text-[#222c44] leading-tight'>
@@ -157,7 +157,7 @@ export default class MultipleItems extends Component {
                                                 </p>
                                             </div>
 
-                                            <div className="mt-auto">
+                                            <div>
                                                 <div className="flex justify-between items-center py-6">
                                                     <div className="flex items-center">
                                                         <Image src="/Metodologia Exclusiva.svg" alt="Metodologia Exclusiva" width={140} height={36} className="object-contain" />
