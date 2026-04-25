@@ -57,12 +57,7 @@ const Navbar = () => {
 
                             <div className="flex flex-shrink-0 items-center">
                                 <img
-                                    className="block h-12 w-auto lg:hidden"
-                                    src={'/logo epec.svg'}
-                                    alt="epec-logo"
-                                />
-                                <img
-                                    className="hidden h-12 w-auto lg:block"
+                                    className="block h-10 md:h-12 w-auto"
                                     src={'/logo epec.svg'}
                                     alt="epec-logo"
                                 />
@@ -93,23 +88,17 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* SIGNIN DIALOG */}
+                        {/* SIGNIN & MOBILE MENU */}
 
-                        <Signdialog />
-
-
-                        {/* REGISTER DIALOG */}
-
-                        <Registerdialog />
-
-
-                        {/* DRAWER FOR MOBILE VIEW */}
-
-                        {/* DRAWER ICON */}
-
-                        <div className='block lg:hidden'>
-                            <Bars3Icon className="block h-6 w-6" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                        <div className="flex items-center">
+                            <Signdialog />
+                            <Registerdialog />
+                            
+                            <div className='block lg:hidden ml-2'>
+                                <Bars3Icon className="block h-8 w-8 text-black" aria-hidden="true" onClick={() => setIsOpen(true)} />
+                            </div>
                         </div>
+
 
                         {/* DRAWER LINKS DATA */}
 

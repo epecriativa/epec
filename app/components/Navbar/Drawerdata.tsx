@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Signdialog from "./Signdialog";
 
 interface NavigationItem {
   name: string;
@@ -8,11 +9,9 @@ interface NavigationItem {
 }
 
 const navigation: NavigationItem[] = [
-  { name: 'Home', href: '/', current: true },
-  { name: 'Courses', href: '#courses', current: false },
-  { name: 'Mentor', href: '#mentor', current: false },
-  { name: 'Group', href: '#/', current: false },
-  { name: 'Testimonial', href: '#testimonial', current: false },
+  { name: 'Sobre', href: '#sobre', current: false },
+  { name: 'Cursos', href: '#courses', current: false },
+  { name: 'Eventos', href: '#eventos', current: false },
 ]
 
 function classNames(...classes: string[]) {
@@ -31,20 +30,18 @@ const Data = () => {
                 href={item.href}
                 className={classNames(
                   item.current ? 'text-black hover:opacity-100' : 'hover:text-black hover:opacity-100',
-                  'py-1 text-lg font-normal opacity-75 block'
+                  'py-4 text-xl font-medium opacity-75 block border-b border-gray-100'
                 )}
                 aria-current={item.current ? 'page' : undefined}
               >
                 {item.name}
               </Link>
             ))}
-            <div className="mt-4"></div>
-            <button className="bg-white w-full text-epec-yellow border border-semiblueviolet font-medium py-2 px-4 rounded">
-              Entrar
-            </button>
-            <button className="bg-semiblueviolet w-full hover:bg-Blueviolet hover:text-white text-Blueviolet font-medium my-2 py-2 px-4 rounded">
-              Registrar
-            </button>
+            
+            <div className="mt-8 flex flex-col gap-4">
+               {/* Usando o Signdialog aqui para manter a funcionalidade */}
+               <Signdialog />
+            </div>
           </div>
         </div>
       </div>

@@ -195,27 +195,53 @@ export default class MultipleItems extends Component {
                                     leaveFrom="opacity-100 translate-y-0 sm:scale-100"
                                     leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                                 >
-                                    <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-5xl h-[90vh] flex flex-col">
+                                    <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-5xl w-[95vw] h-[85vh] sm:h-[90vh] flex flex-col">
                                         <div className="bg-white px-4 py-3 sm:px-6 flex justify-between items-center border-b">
                                             <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
                                                 Ementa do Curso
                                             </Dialog.Title>
-                                            <button
-                                                type="button"
-                                                className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none"
-                                                onClick={() => this.setIsOpen(false)}
-                                            >
-                                                <span className="sr-only">Fechar</span>
-                                                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                                            </button>
+                                            <div className="flex items-center gap-4">
+                                                {currentPdf && (
+                                                    <a 
+                                                        href={currentPdf} 
+                                                        target="_blank" 
+                                                        rel="noopener noreferrer"
+                                                        className="hidden sm:block text-sm text-epec-blue hover:underline"
+                                                    >
+                                                        Abrir em nova aba
+                                                    </a>
+                                                )}
+                                                <button
+                                                    type="button"
+                                                    className="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none"
+                                                    onClick={() => this.setIsOpen(false)}
+                                                >
+                                                    <span className="sr-only">Fechar</span>
+                                                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div className="flex-1 bg-gray-100 relative">
+                                        <div className="flex-1 bg-gray-100 relative overflow-hidden">
                                             {currentPdf ? (
-                                                <iframe
-                                                    src={`${currentPdf}#view=FitH`}
-                                                    className="w-full h-full border-none"
-                                                    title="PDF Viewer"
-                                                ></iframe>
+                                                <div className="w-full h-full flex flex-col">
+                                                    {/* Botão de destaque para Mobile */}
+                                                    <div className="sm:hidden bg-blue-50 p-4 border-b border-blue-100 flex justify-center">
+                                                        <a 
+                                                            href={currentPdf} 
+                                                            target="_blank" 
+                                                            rel="noopener noreferrer"
+                                                            className="bg-epec-blue text-white px-6 py-2 rounded-full font-bold text-sm shadow-md"
+                                                        >
+                                                            Ver Ementa Completa (PDF)
+                                                        </a>
+                                                    </div>
+                                                    <iframe
+                                                        src={`${currentPdf}#toolbar=0&navpanes=0&scrollbar=1&view=FitH`}
+                                                        className="w-full h-full border-none flex-1"
+                                                        title="PDF Viewer"
+                                                        style={{ WebkitOverflowScrolling: 'touch' }}
+                                                    ></iframe>
+                                                </div>
                                             ) : (
                                                 <div className="flex items-center justify-center h-full">
                                                     <p className="text-gray-500">Ementa não disponível para este curso.</p>
