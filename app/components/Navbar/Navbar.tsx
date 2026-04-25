@@ -91,7 +91,7 @@ const Navbar = () => {
                         {/* SIGNIN & MOBILE MENU */}
 
                         <div className="flex items-center lg:gap-0">
-                            <div className="mr-8">
+                            <div className="mr-14">
                                 <Signdialog />
                             </div>
                             
