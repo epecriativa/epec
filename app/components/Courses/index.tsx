@@ -11,7 +11,7 @@ function NextArrow(props: any) {
     const { onClick } = props;
     return (
         <div 
-            className="absolute right-0 top-[35%] -translate-y-1/2 z-10 cursor-pointer bg-white/90 rounded-full p-2 shadow-md sm:hidden border border-gray-100"
+            className="absolute right-0 top-[42%] -translate-y-1/2 z-10 cursor-pointer bg-white/90 rounded-full p-2 shadow-md sm:hidden border border-gray-100"
             onClick={onClick}
         >
             <ChevronRightIcon className="h-6 w-6 text-black" />
@@ -23,7 +23,7 @@ function PrevArrow(props: any) {
     const { onClick } = props;
     return (
         <div 
-            className="absolute left-0 top-[35%] -translate-y-1/2 z-10 cursor-pointer bg-white/90 rounded-full p-2 shadow-md sm:hidden border border-gray-100"
+            className="absolute left-0 top-[42%] -translate-y-1/2 z-10 cursor-pointer bg-white/90 rounded-full p-2 shadow-md sm:hidden border border-gray-100"
             onClick={onClick}
         >
             <ChevronLeftIcon className="h-6 w-6 text-black" />
@@ -141,13 +141,13 @@ export default class MultipleItems extends Component {
                             {postData.map((items, i) => (
                                 <div key={i}>
 
-                                    <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[640px] flex flex-col justify-between'>
+                                    <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[640px] flex flex-col justify-start'>
                                         <div className="relative rounded-3xl overflow-hidden h-[220px] shrink-0">
                                             <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto bg-white object-cover w-full h-full" />
                                         </div>
 
-                                        <div className="px-3 flex-1 flex flex-col justify-between">
-                                            <div className='flex flex-col justify-start pt-6 pb-4'>
+                                        <div className="px-3 flex-1 flex flex-col">
+                                            <div className='flex flex-col justify-start pt-14 pb-1'>
                                                 <h3 className='text-base font-normal opacity-75'>{items.name}</h3>
                                                 <h4 className='text-xl font-bold pt-1 text-[#222c44] leading-tight'>
                                                     {items.heading} {items.heading2}
