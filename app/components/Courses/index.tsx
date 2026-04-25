@@ -4,9 +4,32 @@ import React, { Component, Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 
-// CAROUSEL DATA
+// Custom Arrow Components
+function NextArrow(props: any) {
+    const { onClick } = props;
+    return (
+        <div 
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 rounded-full p-2 shadow-md sm:hidden"
+            onClick={onClick}
+        >
+            <ChevronRightIcon className="h-6 w-6 text-black" />
+        </div>
+    );
+}
+
+function PrevArrow(props: any) {
+    const { onClick } = props;
+    return (
+        <div 
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 rounded-full p-2 shadow-md sm:hidden"
+            onClick={onClick}
+        >
+            <ChevronLeftIcon className="h-6 w-6 text-black" />
+        </div>
+    );
+}
 
 interface DataType {
     heading: string;
@@ -52,8 +75,6 @@ const postData: DataType[] = [
     },
 ]
 
-// CAROUSEL SETTINGS
-
 
 export default class MultipleItems extends Component {
     constructor(props: any) {
@@ -74,9 +95,10 @@ export default class MultipleItems extends Component {
             dots: false,
             infinite: true,
             slidesToShow: 3,
-            // centerMode: true,
-            slidesToScroll: 2,
-            arrows: false,
+            slidesToScroll: 1,
+            arrows: true,
+            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow />,
             autoplay: false,
             speed: 500,
             cssEase: "linear",
@@ -87,7 +109,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 2,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
+                        dots: false,
+                        arrows: false
                     }
                 },
                 {
@@ -96,7 +119,8 @@ export default class MultipleItems extends Component {
                         slidesToShow: 1,
                         slidesToScroll: 1,
                         infinite: true,
-                        dots: false
+                        dots: false,
+                        arrows: true // Habilitar setas no mobile
                     }
                 }
             ]
@@ -112,61 +136,62 @@ export default class MultipleItems extends Component {
                         <Link href={''} className="text-epec-blue text-lg font-medium space-links pointer-events-none">Conheça...&nbsp;&gt;&nbsp;</Link>
                     </div>
 
+                    <div className="relative">
+                        <Slider {...settings}>
+                            {postData.map((items, i) => (
+                                <div key={i}>
 
-                    <Slider {...settings}>
-                        {postData.map((items, i) => (
-                            <div key={i}>
-
-                                <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[640px] flex flex-col justify-between'>
-                                    <div className="relative rounded-3xl overflow-hidden h-[220px]">
-                                        <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto bg-white object-cover w-full h-full" />
-                                    </div>
-
-                                    <div className="px-3">
-                                        <div className='min-h-[160px] flex flex-col justify-start pt-6'>
-                                            <h3 className='text-base font-normal opacity-75'>{items.name}</h3>
-                                            <h4 className='text-xl font-bold pt-1 text-[#222c44] leading-tight'>
-                                                {items.heading} {items.heading2}
-                                            </h4>
-                                            <p className='text-sm font-normal pt-2 opacity-75 line-clamp-3'>
-                                                {items.description}
-                                            </p>
+                                    <div className='bg-white m-3 px-3 pt-3 pb-12 my-20 shadow-courses rounded-2xl h-[640px] flex flex-col justify-between'>
+                                        <div className="relative rounded-3xl overflow-hidden h-[220px]">
+                                            <Image src={items.imgSrc} alt="gaby" width={389} height={262} className="m-auto bg-white object-cover w-full h-full" />
                                         </div>
 
-                                        <div className="flex justify-between items-center py-6">
-                                            <div className="flex items-center">
-                                                <Image src="/Metodologia Exclusiva.svg" alt="Metodologia Exclusiva" width={140} height={36} className="object-contain" />
+                                        <div className="px-3">
+                                            <div className='min-h-[160px] flex flex-col justify-start pt-6'>
+                                                <h3 className='text-base font-normal opacity-75'>{items.name}</h3>
+                                                <h4 className='text-xl font-bold pt-1 text-[#222c44] leading-tight'>
+                                                    {items.heading} {items.heading2}
+                                                </h4>
+                                                <p className='text-sm font-normal pt-2 opacity-75 line-clamp-3'>
+                                                    {items.description}
+                                                </p>
                                             </div>
-                                            <a 
-                                                href={`https://wa.me/5581991337935?text=Olá, gostaria de aplicar para o curso: ${items.heading} ${items.heading2}...`}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="bg-[#b5f78b] text-[#204906] px-6 py-2 rounded-full font-bold text-lg hover:opacity-90 transition-opacity tracking-wider"
-                                            >
-                                                Aplicar
-                                            </a>
-                                        </div>
 
-                                        <hr style={{ color: "#C4C4C4" }} />
-
-                                        <div className="flex justify-between pt-6">
-                                            <div 
-                                                className="flex gap-2 cursor-pointer hover:opacity-75 transition-opacity"
-                                                onClick={() => this.setIsOpen(true, items.ementaSrc)}
-                                            >
-                                                <Image src={'./assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
-                                                <h3 className="text-base font-medium text-black opacity-75">Acesse a Ementa</h3>
+                                            <div className="flex justify-between items-center py-6">
+                                                <div className="flex items-center">
+                                                    <Image src="/Metodologia Exclusiva.svg" alt="Metodologia Exclusiva" width={140} height={36} className="object-contain" />
+                                                </div>
+                                                <a 
+                                                    href={`https://wa.me/5581991337935?text=Olá, gostaria de aplicar para o curso: ${items.heading} ${items.heading2}...`}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="bg-[#b5f78b] text-[#204906] px-6 py-2 rounded-full font-bold text-lg hover:opacity-90 transition-opacity tracking-wider"
+                                                >
+                                                    Aplicar
+                                                </a>
                                             </div>
-                                            <div className="flex gap-2">
-                                                <Image src={'./assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
-                                                <h3 className="text-base font-medium text-black opacity-75">Conheça</h3>
+
+                                            <hr style={{ color: "#C4C4C4" }} />
+
+                                            <div className="flex justify-between pt-6">
+                                                <div 
+                                                    className="flex gap-2 cursor-pointer hover:opacity-75 transition-opacity"
+                                                    onClick={() => this.setIsOpen(true, items.ementaSrc)}
+                                                >
+                                                    <Image src={'./assets/courses/book-open.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                    <h3 className="text-base font-medium text-black opacity-75">Acesse a Ementa</h3>
+                                                </div>
+                                                <div className="flex gap-2">
+                                                    <Image src={'./assets/courses/users.svg'} alt="users" width={24} height={24} className="inline-block m-auto" />
+                                                    <h3 className="text-base font-medium text-black opacity-75">Conheça</h3>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
 
                 {/* PDF Modal */}
