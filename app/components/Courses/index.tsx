@@ -11,7 +11,7 @@ function NextArrow(props: any) {
     const { onClick } = props;
     return (
         <div 
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 rounded-full p-2 shadow-md sm:hidden"
+            className="absolute right-0 top-[35%] -translate-y-1/2 z-10 cursor-pointer bg-white/90 rounded-full p-2 shadow-md sm:hidden border border-gray-100"
             onClick={onClick}
         >
             <ChevronRightIcon className="h-6 w-6 text-black" />
@@ -23,7 +23,7 @@ function PrevArrow(props: any) {
     const { onClick } = props;
     return (
         <div 
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white/80 rounded-full p-2 shadow-md sm:hidden"
+            className="absolute left-0 top-[35%] -translate-y-1/2 z-10 cursor-pointer bg-white/90 rounded-full p-2 shadow-md sm:hidden border border-gray-100"
             onClick={onClick}
         >
             <ChevronLeftIcon className="h-6 w-6 text-black" />
