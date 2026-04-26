@@ -284,9 +284,9 @@ const Quiz = () => {
                                 className="w-full space-y-6"
                             >
                                 <div className="flex items-center gap-4 justify-center md:justify-start">
-                                    <Image src={isCorrect ? "/assets/quiz/check.svg" : "/assets/quiz/idea.svg"} width={40} height={40} alt="Icon" />
+                                    <Image src={isCorrect ? "/assets/quiz/check.svg" : "/assets/quiz/cry.svg"} width={48} height={48} alt="Icon" className="object-contain" />
                                     <h3 className={`text-3xl font-black uppercase italic tracking-tighter ${isCorrect ? 'text-epec-blue' : 'text-red-500'}`}>
-                                        {isCorrect ? 'Arrasou!' : 'Quase lá!'}
+                                        {isCorrect ? 'Parabéns!' : 'Quase lá!'}
                                     </h3>
                                 </div>
                                 <div className={`p-8 rounded-3xl shadow-inner border ${isCorrect ? 'bg-blue-50 border-blue-100' : 'bg-red-50 border-red-100'}`}>
