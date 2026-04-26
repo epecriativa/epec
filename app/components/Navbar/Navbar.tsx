@@ -92,8 +92,9 @@ const Navbar = () => {
 
                         {/* SIGNIN & MOBILE MENU */}
 
-                        <div className="flex items-center gap-6">
+                        <div className="flex items-center gap-2 sm:gap-6">
                             <Signdialog />
+                            <Registerdialog />
                             <div className='block lg:hidden'>
                                 <Bars3Icon className="block h-8 w-8 text-black" aria-hidden="true" onClick={() => setIsOpen(true)} />
                             </div>
