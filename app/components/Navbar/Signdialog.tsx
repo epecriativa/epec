@@ -18,7 +18,7 @@ const Signin = () => {
         <>
             <div className="flex items-center">
                 <div className='block'>
-                    <button type="button" className='text-lg text-epec-blue font-medium focus:outline-none focus:ring-0 mr-2 sm:mr-6' onClick={openModal}>
+                    <button type="button" className='text-sm sm:text-lg text-epec-blue font-medium focus:outline-none focus:ring-0 mr-1 sm:mr-6' onClick={openModal}>
                         Entrar
                     </button>
                 </div>
