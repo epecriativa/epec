@@ -17,8 +17,8 @@ const Register = () => {
     return (
         <>
             <div className="flex items-center">
-                <div className='hidden lg:block'>
-                    <button className="text-[#edbf48] text-lg font-medium py-2 px-6 transition duration-150 ease-in-out rounded-full bg-[#fff6e7] hover:brightness-95 focus:outline-none focus:ring-0" onClick={openModal}>
+                <div className='block'>
+                    <button className="text-[#edbf48] text-sm sm:text-lg font-medium py-1.5 px-3 sm:py-2 sm:px-6 transition duration-150 ease-in-out rounded-full bg-[#fff6e7] hover:brightness-95 focus:outline-none focus:ring-0 whitespace-nowrap" onClick={openModal}>
                         Criar conta
                     </button>
                 </div>
