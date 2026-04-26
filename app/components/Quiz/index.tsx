@@ -235,10 +235,22 @@ const Quiz = () => {
                         {step === 0 && (
                              <motion.div 
                                 initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
+                                animate={{ 
+                                    opacity: 1, 
+                                    scale: [1, 1.05, 1],
+                                }}
+                                transition={{
+                                    scale: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+                                }}
                                 className="relative w-full aspect-square max-w-[280px]"
                              >
-                                <Image src="/assets/quiz/coin.svg" fill alt="Logo Coin" className="object-contain" />
+                                <motion.div
+                                    animate={{ opacity: [1, 0.5, 1] }}
+                                    transition={{ duration: 1.5, repeat: Infinity }}
+                                    className="w-full h-full"
+                                >
+                                    <Image src="/assets/quiz/idea.svg" fill alt="Logo Idea" className="object-contain" />
+                                </motion.div>
                              </motion.div>
                         )}
 
@@ -308,7 +320,15 @@ const Quiz = () => {
                              <motion.div 
                                 key="final-right"
                                 initial={{ opacity: 0, scale: 0.5 }}
-                                animate={{ opacity: 1, scale: 1 }}
+                                animate={{ 
+                                    opacity: 1, 
+                                    scale: 1,
+                                    y: [0, -15, 0]
+                                }}
+                                transition={{
+                                    y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+                                    opacity: { duration: 0.5 }
+                                }}
                                 className="flex flex-col items-center justify-center space-y-6"
                              >
                                 <div className="relative w-48 h-48 md:w-64 md:h-64 drop-shadow-2xl">
